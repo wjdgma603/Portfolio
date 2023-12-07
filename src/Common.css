@@ -1,25 +1,42 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-* {
-  font-family: "Noto Sans KR", sans-serif;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-body {
-  -ms-overflow-style: none;
-}
 
-::-webkit-scrollbar {
-  display: none;
+@layer base {
+  * {
+    font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    -ms-overflow-style: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  li {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
-li {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-  color: black;
+@layer components {
+  .UnderLine::after {
+    display: block;
+    content: "";
+    transform: scaleX(0);
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+  }
+  .UnderLine:hover::after {
+    transform: scaleX(1);
+  }
+  .transition1000 {
+    @apply transition-all duration-1000;
+  }
 }
 
 /* Noto Sans KR 폰트 별 굵기, 리소스 요청 */

@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -15,6 +16,9 @@ module.exports = {
         white400: "#bbb",
         blue: "#374999",
         blue100: "#4A6BD6",
+        darkmodeWhite: "#aba499",
+        darkmodeBlack: "#202324",
+        darkmodeGray: "#575e62",
       },
       keyframes: {
         Sbounce: {
