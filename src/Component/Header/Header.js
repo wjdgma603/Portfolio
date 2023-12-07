@@ -1,8 +1,8 @@
 import Info from "../../Common/Json/Info.json";
 const header = () => {
   return (
-    <header className="Header w-full h-[80px] flex justify-center items-center absolute top-0 left-0">
-      <nav className="">
+    <header className="Header w-full h-[80px] flex justify-center items-center absolute top-0 left-0 select-none">
+      <nav>
         <ul className="flex w-[600px] justify-between">
           {Info.map((InfoItem) => (
             <li>

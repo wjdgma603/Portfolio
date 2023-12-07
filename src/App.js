@@ -1,11 +1,11 @@
 import "./Common.css";
-import { Routes, Route } from "react-router-dom";
 import Header from "./Component/Header/Header";
+import Intro from "./Component/Intro/Intro";
 function App() {
   return (
     <div className="App">
       <Header />
-      <Routes></Routes>
+      <Intro />
     </div>
   );
 }
