@@ -16,9 +16,16 @@ module.exports = {
         white400: "#bbb",
         blue: "#374999",
         blue100: "#4A6BD6",
-        darkmodeWhite: "#aba499",
-        darkmodeBlack: "#202324",
-        darkmodeGray: "#575e62",
+        // darkmode Color
+        darkmodeWhite: "#e8e6e3",
+        darkmodeWhite100: "#d8d4cf",
+        darkmodeWhite200: "#aba499",
+        darkmodeBlack: "#131516",
+        darkmodeBlack100: "#181a1b",
+        darkmodeBlack200: "#202324",
+        darkmodeBlack300: "#454a4d",
+        darkmodeBlack400: "#575e62",
+        darkmodeBlue: "#004daa",
       },
       keyframes: {
         Sbounce: {
