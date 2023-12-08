@@ -1,9 +1,21 @@
-const Intro = () => {
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+const Intro = ({ Info }) => {
+  useEffect(() => {
+    Aos.init({
+      offset: 200,
+      duration: 1200,
+    });
+  }, []);
   return (
-    <section className="w-full h-screen flex items-center justify-between px-[100px] select-none bg-white dark:bg-black100 transition1000">
-      <article className="text-[56px] font-bold tracking-[-3.2px] text-black100 dark:text-darkmodeWhite transition1000 break-keep">
+    <section className="Section flex betweencenter px-[100px] select-none BgColor transition1000">
+      <article
+        className="text-[56px] font-bold tracking-[-3.2px] TextColor transition1000 break-keep"
+        data-aos="fade-right"
+      >
         <span className="text-blue100 UnderLine inline-block after:origin-left after:border-b-[6px] after:border-solid after:duration-[1.5s] after:border-b-blue100">
-          정직한 개발자
+          {Info.HighlightTitle1}
         </span>
         가 되고싶은
         <br />
@@ -17,6 +29,7 @@ const Intro = () => {
           className="object-cover hover:scale-110 transition-transform ease-in-out duration-1000"
           src={require("./images/Intro1.png")}
           alt="IntroImage"
+          data-aos="zoom-in"
         />
       </article>
     </section>
