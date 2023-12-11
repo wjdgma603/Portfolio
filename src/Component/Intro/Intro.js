@@ -12,17 +12,16 @@ const Intro = ({ Info }) => {
     <section className="Section flex betweencenter px-[100px] select-none BgColor transition1000">
       <article
         className="text-[56px] font-bold tracking-[-3.2px] TextColor transition1000 break-keep"
-        data-aos="fade-right"
-      >
+        data-aos="fade-right">
         <span className="text-blue100 UnderLine inline-block after:origin-left after:border-b-[6px] after:border-solid after:duration-[1.5s] after:border-b-blue100">
-          {Info.HighlightTitle1}
+          {Info.HighlightTitle[0]}
         </span>
-        가 되고싶은
+        {Info.HighlightTitle[1]}
         <br />
         <span className="text-blue UnderLine inline-block after:origin-left after:border-b-[6px] after:border-solid after:duration-[1.5s] after:border-b-blue">
-          연정흠
+          {Info.HighlightTitle[2]}
         </span>
-        입니다.
+        {Info.HighlightTitle[3]}
       </article>
       <article className="w-[500px] h-[500px] animate-Sbounce">
         <img

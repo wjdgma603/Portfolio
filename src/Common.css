@@ -24,16 +24,6 @@
   }
 }
 @layer components {
-  .UnderLine::after {
-    display: block;
-    content: "";
-    transform: scaleX(0);
-    transition-property: transform;
-    transition-timing-function: ease-in-out;
-  }
-  .UnderLine:hover::after {
-    transform: scaleX(1);
-  }
   .transition1000 {
     @apply transition-all duration-1000;
   }
@@ -49,14 +39,48 @@
   .TextColor {
     @apply text-black100 dark:text-darkmodeWhite;
   }
+  .RTextColor {
+    @apply text-white dark:text-darkmodeWhite;
+  }
   .BgColor {
     @apply bg-white dark:bg-darkmodeBlack100;
+  }
+  .RBgColor {
+    @apply bg-white dark:bg-darkmodeWhite;
   }
   .title {
     @apply text-black100 text-[40px] font-medium tracking-[-2.88px];
   }
+  .Border {
+    @apply border-b-2 border-solid border-black100 dark:border-darkmodeWhite;
+  }
+  .RBorder {
+    @apply border-b-2 border-solid border-white dark:border-darkmodeWhite;
+  }
+  .AfterDot {
+    @apply relative after:content-["·"] after:block after:absolute after:left-[-20px] after:top-[0px];
+  }
+  .AfterBorder {
+    @apply relative after:content-[""] after:block after:w-[100%] after:absolute after:top-[150px] after:RBorder;
+  }
+  .AfterDotted {
+    @apply relative after:translate-x-[-50%] after:top-[190%] after:left-[50%] after:h-[45px] after:border-r-[2px] after:border-dotted after:border-white after:absolute  dark:after:border-darkmodeWhite after:content-[''];
+  }
+}
+
+@layer Utilities {
   .BoxShadow {
     box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
+  }
+  .UnderLine::after {
+    display: block;
+    content: "";
+    transform: scaleX(0);
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+  }
+  .UnderLine:hover::after {
+    transform: scaleX(1);
   }
 }
 
