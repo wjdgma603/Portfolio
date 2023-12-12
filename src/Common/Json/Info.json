@@ -33,7 +33,21 @@
       { "2023.03": "부트캠프 수강" }
     ]
   },
-  { "title": "Skill" },
+  {
+    "title": "Skill",
+    "FrontEndSkill": [
+      "Front-End Skill",
+      { "HTML": "HTML" },
+      { "CSS": "CSS" },
+      { "JS": "JS" },
+      { "JSX": "JSX" },
+      { "React": "React" },
+      { "ReactRouter": "React\nRouter" },
+      { "Nodejs": "Node.js" },
+      { "Threejs": "Three.js" },
+      { "TailwindCSS": "Tailwind\nCSS" }
+    ]
+  },
   { "title": "Project" },
   { "title": "Contact" }
 ]

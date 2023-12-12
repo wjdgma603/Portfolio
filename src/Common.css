@@ -49,7 +49,7 @@
     @apply bg-white dark:bg-darkmodeWhite;
   }
   .title {
-    @apply text-black100 text-[40px] font-medium tracking-[-2.88px];
+    @apply text-[40px] font-medium tracking-[-2.88px];
   }
   .Border {
     @apply border-b-2 border-solid border-black100 dark:border-darkmodeWhite;
@@ -65,6 +65,9 @@
   }
   .AfterDotted {
     @apply relative after:translate-x-[-50%] after:top-[190%] after:left-[50%] after:h-[45px] after:border-r-[2px] after:border-dotted after:border-white after:absolute  dark:after:border-darkmodeWhite after:content-[''];
+  }
+  .BlurBox {
+    @apply relative bg-[#dadadaa7] backdrop-blur-2xl;
   }
 }
 

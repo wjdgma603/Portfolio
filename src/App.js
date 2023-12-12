@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Header from "./Component/Header/Header";
 import Intro from "./Component/Intro/Intro";
 import About from "./Component/About/About";
+import Skill from "./Component/Skill/Skill";
 function App() {
   const [darkmode, setDarkmode] = useState(false);
   const toggleDarkMode = () => {
@@ -38,6 +39,7 @@ function App() {
       <Header Info={Info} toggleDarkMode={toggleDarkMode} darkmode={darkmode} />
       <Intro Info={Info[0]} />
       <About Info={Info[1]} />
+      <Skill Info={Info[2]} />
       <div></div>
     </div>
   );
