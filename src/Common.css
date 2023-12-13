@@ -69,6 +69,9 @@
   .BlurBox {
     @apply relative bg-[#dadadaa7] backdrop-blur-2xl;
   }
+  .AppIcon {
+    @apply rounded-[17.5px] w-[100px] h-[100px] flex items-center justify-center;
+  }
 }
 
 @layer Utilities {
@@ -84,6 +87,17 @@
   }
   .UnderLine:hover::after {
     transform: scaleX(1);
+  }
+  .ThreeLogoPath {
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+  .ReactLogoPath {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3;
   }
 }
 
