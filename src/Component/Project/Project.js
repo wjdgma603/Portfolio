@@ -1,7 +1,8 @@
-const Project = () => {
+const Project = ({ Info }) => {
   return (
-    <section className="Section bg-slate-400">
-      <div></div>
+    <section className="Section flex bg-slate-400">
+      <article className="flex-1"></article>
+      <article className="flex-[3.2]"></article>
     </section>
   );
 };
