@@ -10,11 +10,11 @@ const Skill = ({ Info }) => {
     });
   }, []);
   return (
-    <section className="w-[100%] h-[100vh] relative">
+    <section className="Section relative">
       <article className="relative">
         <div className="w-[100%] h-[100vh] absolute top-0 left-0">
           <img
-            className="w-[100%] h-[100vh] object-cover dark:brightness-90"
+            className="w-[100%] h-[100vh] object-cover dark:brightness-[80%]"
             src={require("./images/Background.png")}
             alt="Skill Background"
           />
@@ -27,7 +27,7 @@ const Skill = ({ Info }) => {
             className="p-[30px] BlurBox rounded-[30px]"
             data-aos="zoom-in"
             data-aos-delay="100">
-            <h1 className="text-[28px] font-bold TextColor">
+            <h1 className="text-[28px] font-bold APPTextColor">
               {Info.FrontEndSkill[0]}
             </h1>
             <div className="flex gap-x-[30px]">
@@ -40,7 +40,7 @@ const Skill = ({ Info }) => {
             className="p-[30px] BlurBox rounded-[30px]"
             data-aos="zoom-in"
             data-aos-delay="600">
-            <h1 className="text-[28px] font-bold TextColor">
+            <h1 className="text-[28px] font-bold APPTextColor">
               {Info.CommunicationSkill[0]}
             </h1>
             <div className="flex gap-x-[30px]">
@@ -53,7 +53,7 @@ const Skill = ({ Info }) => {
             className="p-[30px] BlurBox rounded-[30px]"
             data-aos="zoom-in"
             data-aos-delay="1200">
-            <h1 className="text-[28px] font-bold TextColor">
+            <h1 className="text-[28px] font-bold APPTextColor">
               {Info.DesignSkill[0]}
             </h1>
             <div className="flex gap-x-[30px]">

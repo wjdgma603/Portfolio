@@ -39,6 +39,9 @@
   .TextColor {
     @apply text-black100 dark:text-darkmodeWhite;
   }
+  .APPTextColor {
+    @apply text-black100 dark:text-darkmodeBlack100;
+  }
   .RTextColor {
     @apply text-white dark:text-darkmodeWhite;
   }
