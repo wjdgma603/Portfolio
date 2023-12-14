@@ -1,6 +1,14 @@
 import SkillWrap from "./Components/SkillWrap";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Skill = ({ Info }) => {
+  useEffect(() => {
+    Aos.init({
+      offset: -100,
+      duration: 1200,
+    });
+  }, []);
   return (
     <section className="w-[100%] h-[100vh] relative">
       <article className="relative">
@@ -15,7 +23,10 @@ const Skill = ({ Info }) => {
       <article className="absolute z-10 px-[100px] top-[50%] translate-y-[-50%] w-[100%] select-none">
         <div className="title font-bold RTextColor mb-[30px]">{Info.title}</div>
         <div className="flex flex-wrap justify-between gap-y-[50px]">
-          <div className="p-[30px] BlurBox rounded-[30px]">
+          <div
+            className="p-[30px] BlurBox rounded-[30px]"
+            data-aos="zoom-in"
+            data-aos-delay="100">
             <h1 className="text-[28px] font-bold TextColor">
               {Info.FrontEndSkill[0]}
             </h1>
@@ -25,7 +36,10 @@ const Skill = ({ Info }) => {
               ))}
             </div>
           </div>
-          <div className="p-[30px] BlurBox rounded-[30px]">
+          <div
+            className="p-[30px] BlurBox rounded-[30px]"
+            data-aos="zoom-in"
+            data-aos-delay="600">
             <h1 className="text-[28px] font-bold TextColor">
               {Info.CommunicationSkill[0]}
             </h1>
@@ -35,7 +49,10 @@ const Skill = ({ Info }) => {
               ))}
             </div>
           </div>
-          <div className="p-[30px] BlurBox rounded-[30px]">
+          <div
+            className="p-[30px] BlurBox rounded-[30px]"
+            data-aos="zoom-in"
+            data-aos-delay="1200">
             <h1 className="text-[28px] font-bold TextColor">
               {Info.DesignSkill[0]}
             </h1>

@@ -5,7 +5,6 @@ import { useEffect } from "react";
 const About = ({ Info }) => {
   useEffect(() => {
     Aos.init({
-      offset: 200,
       duration: 1200,
     });
   }, []);

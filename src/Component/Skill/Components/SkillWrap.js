@@ -1,7 +1,6 @@
 const SkillWrap = ({ Info }) => {
-  const Source = Info.BackgroundColor;
   return (
-    <div className="flex flex-col items-center mt-[20px]">
+    <div className="flex flex-col items-center mt-[20px] transition1000 cursor-pointer hover:scale-[1.15] ">
       <div
         className={`AppIcon`}
         style={{
