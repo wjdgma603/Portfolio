@@ -24,6 +24,9 @@
   }
 }
 @layer components {
+  .transition500 {
+    @apply transition-all duration-500;
+  }
   .transition1000 {
     @apply transition-all duration-1000;
   }
@@ -74,6 +77,28 @@
   }
   .AppIcon {
     @apply rounded-[17.5px] w-[100px] h-[100px] flex items-center justify-center;
+  }
+  .Accordion div {
+    @apply text-[#000] transition500;
+  }
+  .Accordion.Active div {
+    @apply text-[#4a6bd6];
+  }
+
+  .AccordionItem {
+    @apply transition500 overflow-hidden;
+  }
+  .Accordion + .AccordionItem {
+    @apply max-h-0;
+  }
+  .Accordion.Active + .AccordionItem {
+    @apply max-h-[100%];
+  }
+  .Accordion svg {
+    @apply stroke-[#000] translate-y-[-50%] rotate-0 transition500;
+  }
+  .Accordion.Active svg {
+    @apply stroke-[#4a6bd6] translate-y-[-50%] rotate-90;
   }
 }
 
