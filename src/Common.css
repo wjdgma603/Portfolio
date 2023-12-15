@@ -86,13 +86,13 @@
   }
 
   .AccordionItem {
-    @apply transition500 overflow-hidden;
+    @apply transition500 overflow-hidden grid;
   }
   .Accordion + .AccordionItem {
-    @apply max-h-0;
+    @apply grid-rows-[0fr];
   }
   .Accordion.Active + .AccordionItem {
-    @apply max-h-[100%];
+    @apply grid-rows-[1fr];
   }
   .Accordion svg {
     @apply stroke-[#000] translate-y-[-50%] rotate-0 transition500;

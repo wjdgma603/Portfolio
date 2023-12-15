@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 const Project = ({ Info }) => {
-  const [index, setIndex] = useState();
   useEffect(() => {
     const Accordion = document.querySelectorAll(".Accordion");
     Accordion.forEach((Acc) => {
@@ -12,7 +11,6 @@ const Project = ({ Info }) => {
         this.classList.add("Active");
       });
     });
-    const AccordionItem = document.querySelectorAll(".AccordionItem");
   }, []);
   return (
     <section className="Section flex bg-slate-400">
@@ -56,7 +54,7 @@ const Project = ({ Info }) => {
             {Info.PersonalProject.slice(1).map((Project, index) => (
               <div
                 key={(Project.idx = index)}
-                className="h-[100px] text-[#3C3C4399] text-[24px] flex items-center justify-center font-medium bg-white200">
+                className="h-[100px] text-[#3C3C4399] text-[24px] flex items-center justify-center font-medium bg-white200 overflow-hidden">
                 {Project.ProjectName}
               </div>
             ))}
