@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
 const Project = ({ Info }) => {
+  const [currentObj, setCurrentObj] = useState(Info.TeamProject);
+  console.log(Info.TeamProject.slice(1)[0]);
   useEffect(() => {
     const Accordion = document.querySelectorAll(".Accordion");
     Accordion.forEach((Acc) => {
@@ -14,7 +16,7 @@ const Project = ({ Info }) => {
   }, []);
   return (
     <section className="Section flex bg-slate-400">
-      <article className="flex-1 shadow-md">
+      <article className="flex-1 shadow-md overflow-hidden">
         <div className="h-[125px] text-[36px] font-medium uppercase bg-white flex items-center justify-center shadow-md">
           {Info.title}
         </div>
@@ -61,7 +63,12 @@ const Project = ({ Info }) => {
           </div>
         </div>
       </article>
-      <article className="flex-[3.2] bg-white shadow-md"></article>
+      <article className="flex-[3.2] bg-white shadow-md p-[100px]">
+        <div className="text-[36px] font-medium">
+          {currentObj[0]}&nbsp;&#47;&nbsp;{currentObj[1].ProjectName}&nbsp;&#40;
+          {currentObj[1].Member}인&#41;
+        </div>
+      </article>
     </section>
   );
 };

@@ -84,15 +84,14 @@
   .Accordion.Active div {
     @apply text-[#4a6bd6];
   }
-
   .AccordionItem {
-    @apply transition500 overflow-hidden grid;
+    @apply transition-all duration-[650ms] overflow-hidden grid;
   }
   .Accordion + .AccordionItem {
-    @apply grid-rows-[0fr];
+    @apply max-h-[0px];
   }
   .Accordion.Active + .AccordionItem {
-    @apply grid-rows-[1fr];
+    @apply max-h-[500px];
   }
   .Accordion svg {
     @apply stroke-[#000] translate-y-[-50%] rotate-0 transition500;
