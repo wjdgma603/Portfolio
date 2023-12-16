@@ -64,10 +64,11 @@ const Project = ({ Info }) => {
         </div>
       </article>
       <article className="flex-[3.2] bg-white shadow-md p-[100px]">
-        <div className="text-[36px] font-medium">
+        <div className="text-[36px] font-medium mb-[50px]">
           {currentObj[0]}&nbsp;&#47;&nbsp;{currentObj[1].ProjectName}&nbsp;&#40;
           {currentObj[1].Member}인&#41;
         </div>
+        <div className=""></div>
       </article>
     </section>
   );
