@@ -9,6 +9,9 @@
     padding: 0;
     margin: 0;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     -ms-overflow-style: none;
   }
@@ -85,7 +88,7 @@
     @apply text-[#4a6bd6];
   }
   .AccordionItem {
-    @apply transition-all duration-[650ms] overflow-hidden;
+    @apply transition-all duration-[650ms] overflow-hidden cursor-pointer;
   }
   .AccordionTab {
     @apply text-[#000] transition500;

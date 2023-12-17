@@ -9,7 +9,9 @@ const About = ({ Info }) => {
     });
   }, []);
   return (
-    <section className="Section flex justify-end items-end flex-col BgColor transition1000">
+    <section
+      id="About"
+      className="Section flex justify-end items-end flex-col BgColor transition1000">
       <h1
         className="title TextColor font-bold transition1000 px-[100px] py-[40px]"
         data-aos="fade-up">

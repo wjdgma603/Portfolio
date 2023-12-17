@@ -8,8 +8,7 @@ const header = ({ Info, toggleDarkMode, darkmode }) => {
             <li key={InfoItem.title}>
               <a
                 className="text-[20px] TextColor transition1000 font-medium UnderLine inline-block after:origin-center after:border-b-2 after:border-solid after:duration-[.5s] after:border-black100 dark:after:border-darkmodeWhite"
-                href="/"
-              >
+                href={`#${InfoItem.Path}`}>
                 {InfoItem.title}
               </a>
             </li>
@@ -18,11 +17,9 @@ const header = ({ Info, toggleDarkMode, darkmode }) => {
       </nav>
       <div
         className="w-[48px] h-[28px] bg-slate-400 dark:bg-blue100 absolute right-[250px] rounded-[25px] cursor-pointer shadow-md transition1000"
-        onClick={() => toggleDarkMode()}
-      >
+        onClick={() => toggleDarkMode()}>
         <div
-          className={`w-[22px] h-[22px] bg-white dark:bg-darkmodeWhite absolute top-[50%] ${darkmoded} translate-y-[-50%] rounded-[50%] transition1000`}
-        ></div>
+          className={`w-[22px] h-[22px] bg-white dark:bg-darkmodeWhite absolute top-[50%] ${darkmoded} translate-y-[-50%] rounded-[50%] transition1000`}></div>
       </div>
     </header>
   );

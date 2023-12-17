@@ -10,7 +10,7 @@ const Skill = ({ Info }) => {
     });
   }, []);
   return (
-    <section className="Section relative">
+    <section id="Skill" className="Section relative">
       <article className="relative">
         <div className="w-[100%] h-[100vh] absolute top-0 left-0">
           <img
