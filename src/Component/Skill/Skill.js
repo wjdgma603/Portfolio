@@ -1,4 +1,4 @@
-import SkillWrap from "./Components/SkillWrap";
+import SkillWrap from "../../Common/Component/SkillWrap";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";

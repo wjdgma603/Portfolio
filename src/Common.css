@@ -85,7 +85,13 @@
     @apply text-[#4a6bd6];
   }
   .AccordionItem {
-    @apply transition-all duration-[650ms] overflow-hidden grid;
+    @apply transition-all duration-[650ms] overflow-hidden;
+  }
+  .AccordionTab {
+    @apply text-[#000] transition500;
+  }
+  .AccordionTab.Active {
+    @apply text-[#4a6bd6];
   }
   .Accordion + .AccordionItem {
     @apply max-h-[0px];
