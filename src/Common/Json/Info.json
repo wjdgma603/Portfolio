@@ -257,6 +257,13 @@
   },
   {
     "Path": "Contact",
-    "title": "Contact"
+    "title": "Contact",
+    "PersonalData": {
+      "Name": ["Name", "Yeon Jeong Heum"],
+      "From": ["From", "Dobong-gu / Seoul"],
+      "To": ["To", "Front-end Developer"],
+      "Strength": ["Strength", "Readiness"],
+      "Gate": "프론트 엔드 개발자가 되기 위한 비상을 "
+    }
   }
 ]

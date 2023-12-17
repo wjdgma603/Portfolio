@@ -6,6 +6,7 @@ import Intro from "./Component/Intro/Intro";
 import About from "./Component/About/About";
 import Skill from "./Component/Skill/Skill";
 import Project from "./Component/Project/Project";
+import Footer from "./Component/Footer/Footer";
 function App() {
   const [darkmode, setDarkmode] = useState(false);
   const toggleDarkMode = () => {
@@ -42,7 +43,7 @@ function App() {
       <About Info={Info[1]} />
       <Skill Info={Info[2]} />
       <Project Info={Info[3]} />
-      <div></div>
+      <Footer Info={Info[4]} />
     </div>
   );
 }
