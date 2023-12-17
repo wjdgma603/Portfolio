@@ -80,9 +80,22 @@ const Footer = ({ Info }) => {
           </div>
         </div>
         <div className="w-[150px] absolute top-[50%] translate-y-[-50%] left-[1250px]">
-          <img className="object-cover" src={require("./images/Barcode.png")} />
+          <img
+            className="object-cover"
+            src={require("./images/Barcode.png")}
+            alt="Barcode"
+          />
         </div>
-        <div className="w-[500px]"></div>
+        <div className="w-[500px] px-[30px] flex flex-col justify-center items-center">
+          <div>
+            <img
+              className="object-cover"
+              src={require("./images/QR.png")}
+              alt="QR"
+            />
+          </div>
+          <div className="mt-[20px]">{Info.Explain}</div>
+        </div>
       </div>
     </div>
   );
