@@ -233,6 +233,7 @@ const Project = ({ Info }) => {
             src={require(`./images/${
               current.Object[current.Index].ImgName
             }.png`)}
+            alt={`${current.Object[current.Index].ProjectName} Project`}
           />
         </div>
       </article>
