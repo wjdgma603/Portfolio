@@ -51,7 +51,9 @@ const Project = ({ Info }) => {
         </div>
         <div>
           <div
-            onClick={() => MoveTo(Info.TeamProject, 2)}
+            onClick={() =>
+              MoveTo(Info.TeamProject, Info.TeamProject.slice(1).length)
+            }
             className="h-[110px] flex items-center justify-center BgColor TextColor relative cursor-pointer Accordion Active">
             <div className="text-[28px] font-medium translate500">
               {Info.TeamProject[0]}
@@ -77,7 +79,9 @@ const Project = ({ Info }) => {
         </div>
         <div>
           <div
-            onClick={() => MoveTo(Info.PersonalProject, 2)}
+            onClick={() =>
+              MoveTo(Info.PersonalProject, Info.PersonalProject.slice(1).length)
+            }
             className="h-[110px] flex items-center justify-center BgColor TextColor relative cursor-pointer Accordion">
             <div className="text-[28px] font-medium translate500">
               {Info.PersonalProject[0]}
