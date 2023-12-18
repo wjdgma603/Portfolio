@@ -9,6 +9,12 @@ const Project = ({ Info }) => {
   function MoveTo(Obj, Idx) {
     setCurrent({ Object: Obj, Index: Idx });
   }
+  const [isOpen, setIsOpen] = useState(false);
+  if (isOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
   useEffect(() => {
     const Accordion = document.querySelectorAll(".Accordion");
     const AccordionTab = document.querySelectorAll(".AccordionTab");
@@ -38,15 +44,15 @@ const Project = ({ Info }) => {
     AccordionTab[0].classList.add("Active");
   }, []);
   return (
-    <section id="Project" className="Section flex bg-slate-400">
-      <article className="flex-1 shadow-md overflow-hidden">
-        <div className="h-[125px] text-[36px] font-medium uppercase bg-white flex items-center justify-center shadow-md">
+    <section id="Project" className="Section relative flex">
+      <article className="flex-1 shadow-md bg-slate-400 dark:bg-darkmodeBlack400 h-[130vh]">
+        <div className="h-[125px] text-[36px] font-medium uppercase DeepBgColor flex items-center justify-center shadow-md TextColor">
           {Info.title}
         </div>
         <div>
           <div
             onClick={() => MoveTo(Info.TeamProject, 2)}
-            className="h-[110px] flex items-center justify-center bg-white relative cursor-pointer Accordion Active">
+            className="h-[110px] flex items-center justify-center BgColor TextColor relative cursor-pointer Accordion Active">
             <div className="text-[28px] font-medium translate500">
               {Info.TeamProject[0]}
             </div>
@@ -63,7 +69,7 @@ const Project = ({ Info }) => {
                 <div
                   key={Project.id}
                   onClick={() => MoveTo(Info.TeamProject, Project.id)}
-                  className="h-[100px] text-[#3C3C4399] text-[24px] flex items-center justify-center font-medium bg-white200 AccordionTab">
+                  className="h-[100px] text-[#3C3C4399] dark:text-[#ffffff99] text-[24px] flex items-center justify-center font-medium TabBgColor AccordionTab">
                   {Project.ProjectName} ({Project.Member}인)
                 </div>
               ))}
@@ -71,8 +77,8 @@ const Project = ({ Info }) => {
         </div>
         <div>
           <div
-            onClick={() => MoveTo(Info.PersonalProject, 1)}
-            className="h-[110px] flex items-center justify-center bg-white relative cursor-pointer Accordion">
+            onClick={() => MoveTo(Info.PersonalProject, 2)}
+            className="h-[110px] flex items-center justify-center BgColor TextColor relative cursor-pointer Accordion">
             <div className="text-[28px] font-medium translate500">
               {Info.PersonalProject[0]}
             </div>
@@ -89,14 +95,14 @@ const Project = ({ Info }) => {
                 <div
                   key={Project.id}
                   onClick={() => MoveTo(Info.PersonalProject, Project.id)}
-                  className="h-[100px] text-[#3C3C4399] text-[24px] flex items-center justify-center font-medium bg-white200 overflow-hidden AccordionTab">
+                  className="h-[100px] text-[#3C3C4399] dark:text-[#ffffff99] text-[24px] flex items-center justify-center font-medium TabBgColor overflow-hidden AccordionTab">
                   {Project.ProjectName}
                 </div>
               ))}
           </div>
         </div>
       </article>
-      <article className="flex-[3.2] bg-white shadow-md p-[75px]">
+      <article className="flex-[3.2] h-[120vh] BgColor TextColor p-[75px]">
         <div className="text-[36px] font-medium pb-[40px]">
           {current.Object[0]}&nbsp;&#47;&nbsp;
           {current.Object[current.Index].ProjectName}
@@ -104,7 +110,9 @@ const Project = ({ Info }) => {
             ` (${current.Object[current.Index].Member}인)`}
         </div>
         <div className="relative">
-          <div className="absolute w-[45%] max-h-[50%] transition-all duration-[1500ms] z-[10] hover:w-[100%]">
+          <div
+            className="absolute w-[45%] max-h-[50%] cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}>
             <img
               className="object-cover shadow-md"
               src={require(`./images/${
@@ -128,7 +136,7 @@ const Project = ({ Info }) => {
                   <div className="text-[24px] font-bold">수행기간</div>
                   <div className="flex flex-col items-center">
                     <div className="text-[20px] font-medium">
-                      {current.Object[current.Index].ProjectDate[1]}개월
+                      {current.Object[current.Index].ProjectDate[1]}
                     </div>
                     <div className="text-[14px] mt-[10px]">
                       &#40;{current.Object[current.Index].ProjectDate[0]}&#41;
@@ -163,7 +171,7 @@ const Project = ({ Info }) => {
                 {current.Object[current.Index].Link.MoreView && (
                   <div>
                     <a
-                      className="relative h-[60px] w-[200px] bg-slate-200 rounded-[30px] block flex justify-center items-center shadow-md"
+                      className="relative h-[60px] w-[200px] bg-slate-200 text-black dark:text-black rounded-[30px] flex justify-center items-center shadow-md"
                       href={current.Object[current.Index].Link.MoreView}
                       target="blank">
                       <div className="flex items-center gap-x-[10px]">
@@ -189,7 +197,7 @@ const Project = ({ Info }) => {
                 {current.Object[current.Index].Link.GitHub && (
                   <div>
                     <a
-                      className="relative h-[60px] w-[170px] bg-[#333] rounded-[30px] block flex justify-center items-center shadow-md"
+                      className="relative h-[60px] w-[170px] bg-[#333] rounded-[30px] flex justify-center items-center shadow-md"
                       href={current.Object[current.Index].Link.GitHub}
                       target="blank">
                       <div className="flex items-center gap-x-[10px]">
@@ -213,6 +221,19 @@ const Project = ({ Info }) => {
               </div>
             </div>
           </div>
+        </div>
+      </article>
+      <article
+        className="fixed top-0 left-0 bg-[#00000080] z-20 w-[100%] h-[100%] items-center justify-center cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+        style={{ display: isOpen ? "flex" : "none" }}>
+        <div className="h-[70%] w=[100%]">
+          <img
+            className="h-[100%] object-cover"
+            src={require(`./images/${
+              current.Object[current.Index].ImgName
+            }.png`)}
+          />
         </div>
       </article>
     </section>

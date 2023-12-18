@@ -22,8 +22,7 @@
     list-style-type: none;
   }
   a {
-    text-decoration: none;
-    color: black;
+    @apply no-underline TextColor;
   }
 }
 @layer components {
@@ -52,10 +51,16 @@
     @apply text-white dark:text-darkmodeWhite;
   }
   .BgColor {
-    @apply bg-white dark:bg-darkmodeBlack100;
+    @apply bg-white dark:bg-darkmodeBlack200;
+  }
+  .DeepBgColor {
+    @apply bg-white dark:bg-black;
   }
   .RBgColor {
     @apply bg-white dark:bg-darkmodeWhite;
+  }
+  .TabBgColor {
+    @apply bg-white200 dark:bg-darkmodeBlack300;
   }
   .title {
     @apply text-[40px] font-medium tracking-[-2.88px];
@@ -82,7 +87,7 @@
     @apply rounded-[17.5px] w-[100px] h-[100px] flex items-center justify-center;
   }
   .Accordion div {
-    @apply text-[#000] transition500;
+    @apply transition500;
   }
   .Accordion.Active div {
     @apply text-[#4a6bd6];
@@ -91,10 +96,10 @@
     @apply transition-all duration-[650ms] overflow-hidden cursor-pointer;
   }
   .AccordionTab {
-    @apply text-[#000] transition500;
+    @apply transition500;
   }
   .AccordionTab.Active {
-    @apply text-[#4a6bd6];
+    @apply text-[#4a6bd6] dark:text-[#4a6bd6];
   }
   .Accordion + .AccordionItem {
     @apply max-h-[0px];
@@ -103,7 +108,7 @@
     @apply max-h-[500px];
   }
   .Accordion svg {
-    @apply stroke-[#000] translate-y-[-50%] rotate-0 transition500;
+    @apply stroke-[#000] dark:stroke-darkmodeWhite translate-y-[-50%] rotate-0 transition500;
   }
   .Accordion.Active svg {
     @apply stroke-[#4a6bd6] translate-y-[-50%] rotate-90;

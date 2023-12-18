@@ -2,8 +2,8 @@ const Footer = ({ Info }) => {
   return (
     <div
       id="Contact"
-      className="w-[100%] h-[768px] relative after:h-[768px] after:block after:absolute after:right-[500px] after:top-[0px] after:border-[5px] after:border-dashed after:border-[#ccc]">
-      <div className="h-[250px] w-[100%] bg-blue100 flex relative justify-center items-center rounded-t-[135px]">
+      className="w-[100%] relative bg-white rounded-t-[135px] overflow-hidden after:h-[100%] after:block after:absolute after:right-[500px] after:top-[0px] after:border-[5px] after:border-dashed after:border-[#ccc]">
+      <div className="h-[250px] w-[100%] bg-blue100 flex relative justify-center items-center">
         <svg
           className="absolute top-[50%] left-[300px] translate-y-[-50%]"
           width="276"
@@ -40,7 +40,7 @@ const Footer = ({ Info }) => {
           </defs>
         </svg>
       </div>
-      <div className="pl-[100px] py-[50px] uppercase relative flex justify-between">
+      <div className="pl-[100px] py-[50px] uppercase relative flex justify-between BgColor TextColor">
         <div className="flex flex-col justify-between gap-y-[100px]">
           <div className="flex gap-x-[100px]">
             <div className="flex text-[24px] gap-x-[40px]">
@@ -87,7 +87,7 @@ const Footer = ({ Info }) => {
           />
         </div>
         <div className="w-[500px] px-[30px] flex flex-col justify-center items-center">
-          <div>
+          <div className="bg-white">
             <img
               className="object-cover"
               src={require("./images/QR.png")}
